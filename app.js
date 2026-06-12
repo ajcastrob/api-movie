@@ -6,7 +6,7 @@ import cors from "cors";
 
 const app = express();
 
-const PORT = process.env.PORT ?? 1234;
+const port = process.env.PORT ?? 1234;
 
 const HOSTNAME = "localhost";
 
@@ -85,6 +85,6 @@ app.patch("/movies/:id", (req, res) => {
   res.status(201).json(updateMovie);
 });
 
-app.listen(PORT, HOSTNAME, () => {
-  console.log(`Server listening at http://${HOSTNAME}:${PORT}`);
+app.listen(port, HOSTNAME, () => {
+  console.log(`Server listening at http://${HOSTNAME}:${port}`);
 });
