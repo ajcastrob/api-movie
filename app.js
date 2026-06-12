@@ -2,7 +2,7 @@ import express from "express";
 import movies from "./movies.json" with { type: "json" };
 import crypto from "node:crypto";
 import { validateSchema, validatePartialMovie } from "./schemas/movies.js";
-import { cors } from "cors";
+import cors from "cors";
 
 const app = express();
 
