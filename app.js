@@ -6,9 +6,7 @@ import cors from "cors";
 
 const app = express();
 
-const port = process.env.PORT ?? 1234;
-
-const HOSTNAME = "localhost";
+const port = process.env.PORT || 1234;
 
 app.disable("x-powered-by");
 
@@ -85,6 +83,6 @@ app.patch("/movies/:id", (req, res) => {
   res.status(201).json(updateMovie);
 });
 
-app.listen(port, HOSTNAME, () => {
-  console.log(`Server listening at http://${HOSTNAME}:${port}`);
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
